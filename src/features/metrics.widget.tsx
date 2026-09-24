@@ -14,7 +14,7 @@ import {
 } from "solid-js";
 import { useMotionValue } from "@/motion/hooks";
 import { FaSolidMemory } from "solid-icons/fa";
-import { FaSolidSun } from "solid-icons/fa";
+// import { FaSolidSun } from "solid-icons/fa";
 import { RiDeviceCpuLine } from "solid-icons/ri";
 
 function Metric(props: ParentProps) {
@@ -93,7 +93,7 @@ export function MetricsWidget() {
         <FaSolidMemory class="w-4 h-4 text-rose-pine-pine" />
         {Math.round(memoryUsage.get()).toLocaleString(undefined, {})}%
       </Metric>
-      <Metric>
+      {/* <Metric>
         <FaSolidSun
           class="w-3.5 h-3.5 transition-colors"
           classList={{
@@ -111,7 +111,7 @@ export function MetricsWidget() {
           }}
         />
         {Math.round(weather.get())}°
-      </Metric>
+      </Metric> */}
     </GroupItem>
   );
 }

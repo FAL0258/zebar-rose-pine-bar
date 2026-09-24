@@ -90,13 +90,13 @@ export function StopWatchWidget() {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div 
-          class="flex items-center gap-2 cursor-pointer select-none" 
+          class="flex items-center cursor-pointer select-none" 
           onClick={toggleTimer}
         >
           <span style={{ color: iconColor(), transition: "color var(--duration-250) var(--ease-ios)" }}>
             ⏱
           </span>
-          <span class="w-[48px] text-right font-mono font-semibold" style={{ color: "var(--color-rose-pine-text)" }}>
+          <span class="w-[48px] text-right" style={{ color: "var(--color-rose-pine-text)" }}>
             {formatTime(elapsedSeconds())}
           </span>
         </div>

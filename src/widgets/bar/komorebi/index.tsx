@@ -7,7 +7,7 @@ import { FocusedWindowTitleKomorebiWidget } from "@features/focused-window-title
 import { Group } from "@components/group.component";
 import { WorkspacesKomorebiWidget } from "@features/workspaces.komorebi.widget";
 import { LayoutKomorebiWidget } from "@features/layout.komorebi.widget";
-import { MediaWidget } from "@features/media.widget";
+// import { MediaWidget } from "@features/media.widget";
 import { MetricsWidget } from "@features/metrics.widget";
 import { KeyboardLayoutWidget } from "@features/keyboard-layout.widget";
 import { DateTimeWidget } from "@features/date-time.widget";
@@ -35,7 +35,7 @@ export function LeftGroup() {
     >
       <WorkspacesKomorebiWidget />
       <LayoutKomorebiWidget />
-      <MediaWidget />
+      {/* <MediaWidget /> */}
     </Group>
   );
 }
@@ -78,8 +78,8 @@ export function RightGroup() {
       }}
       class="justify-self-end justify-end"
     >
-      <MetricsWidget />
       <KeyboardLayoutWidget />
+      <MetricsWidget />
       <DateTimeWidget />
     </Group>
   );

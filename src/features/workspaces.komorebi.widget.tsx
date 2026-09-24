@@ -62,7 +62,8 @@ export function WorkspacesKomorebiWidget() {
                 workspace().floatingWindows.length > 0 ||
                 workspace().maximizedWindow ||
                 workspace().monocleContainer ||
-                workspace() === currentMonitorWorkspace()
+                workspace() === currentMonitorWorkspace() ||
+                true
               }
             >
               <Motion.span
@@ -78,7 +79,7 @@ export function WorkspacesKomorebiWidget() {
                 }}
               >
                 <Motion.button
-                  class="origin-left transition-colors h-[90%] rounded-[0.25rem] overflow-hidden hover:scale-105 hover:border-rose-pine-gold border-solid border-t-1 border-transparent inline-flex items-center justify-center"
+                  class="px-1 min-w-[20px] origin-left transition-colors h-[90%] rounded-[0.25rem] overflow-hidden hover:scale-105 hover:border-rose-pine-iris border-solid border-t-1 border-transparent inline-flex items-center justify-center"
                   classList={{
                     "text-rose-pine-gold font-bold":
                       workspace() === currentMonitorWorkspace(),
