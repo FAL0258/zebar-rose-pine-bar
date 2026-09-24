@@ -41,11 +41,7 @@
 }
 
 body {
-  font-family:
-    "Sarasa UI TC",
-    Hack Nerd Font Mono,
-    ui-monospace,
-    monospace;
+  font-family: "Sarasa UI TC", sans-serif;
   font-size: 13px;
 }
 
