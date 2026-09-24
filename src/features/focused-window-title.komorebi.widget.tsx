@@ -9,16 +9,30 @@ export function FocusedWindowTitleKomorebiWidget() {
       providers.komorebi?.focusedMonitor === providers.komorebi?.currentMonitor,
   );
 
-  const title = createMemo(
-    () =>
-      providers.komorebi?.focusedWorkspace.maximizedWindow?.title ??
-      providers.komorebi?.focusedWorkspace.tilingContainers[
-        providers.komorebi?.focusedWorkspace.focusedContainerIndex
-      ]?.windows[0]?.title ??
-      providers.komorebi?.focusedWorkspace.monocleContainer?.windows[0]
-        ?.title ??
-      "-",
-  );
+const title = createMemo(() => {
+    const workspace = providers.komorebi?.focusedWorkspace;
+    if (!workspace) return "-";
+
+    // 1. Expand the type to accept null values from Komorebi
+    let activeExe: string | null | undefined;
+
+    if (workspace.maximizedWindow) {
+      activeExe = workspace.maximizedWindow.exe;
+    } 
+    else if (workspace.monocleContainer) {
+      // 2. Cast to 'any' to bypass Zebar's missing TS definitions
+      const monocle = workspace.monocleContainer as any;
+      activeExe = monocle.windows[monocle.focusedWindowIndex ?? 0]?.exe;
+    } 
+    else {
+      const activeContainer = workspace.tilingContainers[workspace.focusedContainerIndex] as any;
+      if (activeContainer) {
+        activeExe = activeContainer.windows[activeContainer.focusedWindowIndex ?? 0]?.exe;
+      }
+    }
+
+    return (activeExe ?? "-").replace(".exe", "");
+  });
 
   return (
     <GroupItem class="text-ellipsis whitespace-nowrap max-w-[200px] 2xl:max-w-[350px] lg:max-w-[200px]">
