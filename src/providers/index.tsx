@@ -4,8 +4,9 @@ import { onCleanup, onMount, useContext } from "solid-js";
 import { createContext, ParentProps } from "solid-js";
 
 export const providers = zebar.createProviderGroup({
-  cpu: { type: "cpu" },
-  memory: { type: "memory" },
+  cpu: { type: "cpu", refreshInterval: 5000 },
+  memory: { type: "memory", refreshInterval: 5000 },
+  network: { type: "network", refreshInterval: 3000 },
   weather: { type: "weather" },
   date: { type: "date", formatting: "dd MMM HH:mm:ss" },
   komorebi: { type: "komorebi" },
