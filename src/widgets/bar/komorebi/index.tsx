@@ -11,6 +11,7 @@ import { MediaWidget } from "@features/media.widget";
 import { MetricsWidget } from "@features/metrics.widget";
 import { KeyboardLayoutWidget } from "@features/keyboard-layout.widget";
 import { DateTimeWidget } from "@features/date-time.widget";
+import { StopWatchWidget } from "@features/stopwatch.widget";
 import { onMount } from "solid-js";
 motion;
 
@@ -56,6 +57,7 @@ export function CenterGroup() {
       class="justify-self-center"
     >
       <FocusedWindowTitleKomorebiWidget />
+      <StopWatchWidget />
     </Group>
   );
 }

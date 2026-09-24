@@ -31,6 +31,9 @@ Runs the app in the development mode.
 
 ### `pnpm run build`
 
+> If prompt for running `pnpm approve-builds`:
+> - Select both `@tailwindcss/oxide` and `esbuild`
+
 Builds the app for production to the `dist` folder.<br>
 It bundles Solid in production mode and optimizes the build for the best performance.
 
