@@ -7,9 +7,9 @@ import { FocusedWindowTitleKomorebiWidget } from "@features/focused-window-title
 import { Group } from "@components/group.component";
 import { WorkspacesKomorebiWidget } from "@features/workspaces.komorebi.widget";
 import { LayoutKomorebiWidget } from "@features/layout.komorebi.widget";
-// import { MediaWidget } from "@features/media.widget";
 import { MetricsWidget } from "@features/metrics.widget";
 import { KeyboardLayoutWidget } from "@features/keyboard-layout.widget";
+import { BatteryWidget } from "@features/battery.widget";
 import { DateTimeWidget } from "@features/date-time.widget";
 import { StopWatchWidget } from "@features/stopwatch.widget";
 import { onMount } from "solid-js";
@@ -35,7 +35,6 @@ export function LeftGroup() {
     >
       <WorkspacesKomorebiWidget />
       <LayoutKomorebiWidget />
-      {/* <MediaWidget /> */}
     </Group>
   );
 }
@@ -80,6 +79,7 @@ export function RightGroup() {
     >
       <KeyboardLayoutWidget />
       <MetricsWidget />
+      <BatteryWidget />
       <DateTimeWidget />
     </Group>
   );

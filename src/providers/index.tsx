@@ -7,12 +7,13 @@ export const providers = zebar.createProviderGroup({
   cpu: { type: "cpu", refreshInterval: 5000 },
   memory: { type: "memory", refreshInterval: 5000 },
   network: { type: "network", refreshInterval: 3000 },
-  weather: { type: "weather" },
+  battery: { type: "battery", refreshInterval: 60000 },
+  // weather: { type: "weather" },
   date: { type: "date", formatting: "dd MMM HH:mm:ss" },
   komorebi: { type: "komorebi" },
   glazewm: { type: "glazewm" },
   keyboard: { type: "keyboard" },
-  media: { type: "media" },
+  // media: { type: "media" },
   tray: { type: "systray" },
 });
 

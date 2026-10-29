@@ -4,7 +4,6 @@ import { render } from "solid-js/web";
 import { motion } from "solid-motionone";
 import { ProvidersProvider } from "@providers/index";
 import { Group } from "@components/group.component";
-import { MediaWidget } from "@features/media.widget";
 import { MetricsWidget } from "@features/metrics.widget";
 import { KeyboardLayoutWidget } from "@features/keyboard-layout.widget";
 import { DateTimeWidget } from "@features/date-time.widget";
@@ -32,7 +31,6 @@ export function LeftGroup() {
       class="justify-self-start justify-start"
     >
       <WorkspacesGlazewmWidget />
-      <MediaWidget />
     </Group>
   );
 }
